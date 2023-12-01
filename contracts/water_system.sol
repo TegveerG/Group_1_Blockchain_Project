@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.4.0;
 
-contract EnergySharingSystem {
+contract WaterSystem {
     
     // Struct to store data for each house
     struct House {
