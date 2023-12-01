@@ -1,2 +1,2 @@
-# Group_1_Blockhain_Project
-Group_1_Blockhain_Project
+# Group_1_Blockchain_Project
+Group_1_Blockchain_Project
