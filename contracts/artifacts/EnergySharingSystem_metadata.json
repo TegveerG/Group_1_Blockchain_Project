@@ -1,0 +1,183 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "fromHouse",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "toHouse",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "EnergyShared",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "houseAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "solarPanelStrength",
+						"type": "uint256"
+					}
+				],
+				"name": "HouseRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "houses",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "solarPanelStrength",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "energyConsumption",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "energySurplus",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_solarPanelStrength",
+						"type": "uint256"
+					}
+				],
+				"name": "registerHouse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_fromHouse",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_toHouse",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "shareEnergy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_houseAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_energyConsumption",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_energySurplus",
+						"type": "uint256"
+					}
+				],
+				"name": "updateHouseData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/water_system.sol": "EnergySharingSystem"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/water_system.sol": {
+			"keccak256": "0x273417b13f7a9614e845392f213eda5083a32912e0f03a53742fa27ead74cc38",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53b57b32f01c28c4f5cee8d9e44c77d60857d221a1109606a0f8595a2103f854",
+				"dweb:/ipfs/QmNpN4vb4Wwpu92bBP2d7ZhFNwf33kD6yA8QzAJGJGyQDx"
+			]
+		}
+	},
+	"version": 1
+}
