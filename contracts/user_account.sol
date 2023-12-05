@@ -25,12 +25,12 @@ contract UserAccountAndBilling {
         address _walletAddress
     ) public {
         // Ensure the user does not already exist
-        require(users[_walletAddress].walletAddress == address(0), "User already exists");
+        require(users[msg.sender].walletAddress == address(0), "User already exists");
 
         // Create a new user with default values
         users[_walletAddress] = User({
             walletAddress: _walletAddress,
-            physAddress: "",
+            physAddress: "placeholder",
             balance: 0,
             userName: "",
             totalWaterUsage: 0
@@ -38,19 +38,13 @@ contract UserAccountAndBilling {
     }
 
     function updateUserWalletAddress(address _newWalletAddress) public {
-        require(
-            users[msg.sender].walletAddress != address(0),
-            "User Does Not Exist."
-        );
+        require(users[0x617F2E2fD72FD9D5503197092aC168c91465E7f2].walletAddress != address(0),"User Does Not Exist.");
 
         users[msg.sender].walletAddress = _newWalletAddress;
     }
 
     function updateUserAccountBalance(uint256 _newBalance) public {
-        require(
-            users[msg.sender].walletAddress != address(0),
-            "User Does Not Exist."
-        );
+            require(users[msg.sender].walletAddress != address(0),"User Does Not Exist.");
         users[msg.sender].balance = _newBalance;
     }
 
@@ -88,6 +82,6 @@ contract UserAccountAndBilling {
         users[msg.sender].totalWaterUsage += _usage;
         uint cost = _usage * raterPerLiter;
         uint new_balance = cost + users[msg.sender].balance;
-        updateUserAccountBalance(new_balance);
+        users[msg.sender].balance = new_balance;
     }
 }
