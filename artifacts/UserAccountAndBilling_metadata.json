@@ -4,7 +4,174 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_waterSystemAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "checkWaterUsage",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "createrUserAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "raterPerLiter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_usage",
+						"type": "uint256"
+					}
+				],
+				"name": "recordWaterUsage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newBalance",
+						"type": "uint256"
+					}
+				],
+				"name": "updateUserAccountBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_newPhysAddress",
+						"type": "string"
+					}
+				],
+				"name": "updateUserPhysicalAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newWalletAddress",
+						"type": "address"
+					}
+				],
+				"name": "updateUserWalletAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "walletAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "physAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalWaterUsage",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewActiveBillings",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "waterSystem",
+				"outputs": [
+					{
+						"internalType": "contract WaterSystem",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -18,7 +185,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/user_account.sol": "UserAccountAndBilling"
+			"user_account.sol": "UserAccountAndBilling"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -32,12 +199,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/user_account.sol": {
-			"keccak256": "0xc09da44022d479a5105eff476f6acf2f3ac22ba54e65e2fec528b8662fa7437e",
+		"user_account.sol": {
+			"keccak256": "0x9dce692ca17f1080826d3b73082a3ca050ab6cc76b5cd60c4bca0196d6e9a48c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cf8408ce1365fb879659840ddd3c4b64e1eca476595dd3e82fd6da543ef4b97a",
-				"dweb:/ipfs/QmXhkQWqDYAWrsTz7BZc1BDGDmDfPNCyRzAS8avF15i92C"
+				"bzz-raw://a56bdad1b9a4ca16e31455083ab6a19b5a6fceac7f11b5fa657977e082d5e7ca",
+				"dweb:/ipfs/QmRmEbmxBrcaQV8QguS49Eq6T1yXSFZMX12Edb8UTfgqgS"
+			]
+		},
+		"water_system.sol": {
+			"keccak256": "0xffcb498214a0da0247b2833772899994b3c0503a8fcb92a43532fc38b3c9b029",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://534878bb5ad3caae433f1d845dd20d118868c7adb1250c7804af5460253f6921",
+				"dweb:/ipfs/Qmdy5YkN5RjoFvmn9TYSg1anXkAF62rbawPWFe2FaveqgQ"
 			]
 		}
 	},
